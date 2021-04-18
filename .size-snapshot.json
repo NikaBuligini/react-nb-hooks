@@ -1,0 +1,58 @@
+{
+  "lifecycle.js": {
+    "bundled": 644,
+    "minified": 401,
+    "gzipped": 215,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 998
+      }
+    }
+  },
+  "events.js": {
+    "bundled": 4072,
+    "minified": 2413,
+    "gzipped": 912,
+    "treeshaked": {
+      "rollup": {
+        "code": 442,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 1426
+      }
+    }
+  },
+  "utils.js": {
+    "bundled": 3149,
+    "minified": 1862,
+    "gzipped": 730,
+    "treeshaked": {
+      "rollup": {
+        "code": 14,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 1119
+      }
+    }
+  },
+  "index.js": {
+    "bundled": 7544,
+    "minified": 4480,
+    "gzipped": 1563,
+    "treeshaked": {
+      "rollup": {
+        "code": 442,
+        "import_statements": 14
+      },
+      "webpack": {
+        "code": 1547
+      }
+    }
+  }
+}
