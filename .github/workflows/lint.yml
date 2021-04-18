@@ -63,3 +63,20 @@ jobs:
           path: "."
           key: ${{ github.sha }}
       - run: yarn test
+  
+  publish:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+      - uses: actions/cache@v1
+        id: restore-build
+        with:
+          path: "."
+          key: ${{ github.sha }}
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./dist/package.json
+
+      - if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
