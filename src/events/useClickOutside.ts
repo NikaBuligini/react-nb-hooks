@@ -1,13 +1,12 @@
 import { useRef } from 'react';
 import { useEventListener } from './useEventListener';
 
-export function useClickOutside<TElement extends HTMLElement>(
-  callback: (event: MouseEvent) => void,
-) {
-  const ref = useRef<TElement>(null);
+export function useClickOutside<T>(callback: (event: MouseEvent) => void) {
+  const ref = useRef<T>(null);
 
   const mousedown = (event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
+    // @ts-ignore
+    if (ref.current && !ref.current.contains(event.target)) {
       callback(event);
     }
   };

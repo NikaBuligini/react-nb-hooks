@@ -1,6 +1,6 @@
 {
   "name": "react-nb-hooks",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple react hooks",
   "main": "index.js",
   "module": "esm/index.js",
